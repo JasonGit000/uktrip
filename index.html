@@ -314,7 +314,7 @@
     .about-text p {
       color: var(--muted);
       margin-bottom: 16px;
-      font-size: 1rem;
+      font-size: 1.2rem;
     }
 
     .a4-photo-frame {
@@ -439,13 +439,13 @@
       gap: 16px;
       padding: 10px 0;
       border-bottom: 1px dashed var(--border);
-      font-size: 0.9rem;
+      font-size: 1.2rem;
     }
     .itinerary-item:last-child { border-bottom: none; }
 
     .it-date {
       font-family: 'DM Mono', monospace;
-      font-size: 0.7rem;
+      font-size: 1.05rem;
       color: var(--gold);
       white-space: nowrap;
       padding-top: 2px;
@@ -453,8 +453,8 @@
     }
 
     .it-place { color: var(--ink); }
-    .it-place strong { display: block; font-weight: 600; }
-    .it-place small { color: var(--muted); font-size: 0.82rem; }
+    .it-place strong { display: block; font-weight: 600;font-size: 1.25rem; }
+    .it-place small { color: var(--muted); font-size: 0.95rem; }
 
     .tiers {
       display: grid;
@@ -567,7 +567,7 @@
 
     .modal-tier-badge {
       font-family: 'DM Mono', monospace;
-      font-size: 0.6rem;
+      font-size: 0.8rem;
       letter-spacing: 0.2em;
       color: var(--gold);
       text-transform: uppercase;
@@ -576,14 +576,14 @@
 
     .modal h3 {
       font-family: 'Playfair Display', serif;
-      font-size: 1.6rem;
+      font-size: 2rem;
       font-weight: 700;
       margin-bottom: 4px;
     }
 
     .modal-amount {
       font-family: 'DM Mono', monospace;
-      font-size: 0.8rem;
+      font-size: 1rem;
       color: var(--accent);
       margin-bottom: 24px;
     }
@@ -596,7 +596,7 @@
 
     .modal-section-title {
       font-family: 'DM Mono', monospace;
-      font-size: 0.6rem;
+      font-size: 1rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: var(--gold);
@@ -616,14 +616,14 @@
       align-items: center;
       padding: 7px 0;
       border-bottom: 1px dashed var(--border);
-      font-size: 0.88rem;
+      font-size: 1.4rem;
       gap: 12px;
     }
     .bank-row:last-child { border-bottom: none; }
 
     .bank-label {
       font-family: 'DM Mono', monospace;
-      font-size: 0.65rem;
+      font-size: 1.2rem;
       color: var(--muted);
       white-space: nowrap;
     }
@@ -641,7 +641,7 @@
 
     .copy-hint {
       font-family: 'DM Mono', monospace;
-      font-size: 0.6rem;
+      font-size: 0.8rem;
       color: var(--muted);
       margin-bottom: 20px;
     }
@@ -653,7 +653,7 @@
       background: var(--ink);
       color: var(--paper);
       font-family: 'DM Mono', monospace;
-      font-size: 0.7rem;
+      font-size: 0.8rem;
       letter-spacing: 0.1em;
       padding: 10px 20px;
       opacity: 0;
@@ -816,11 +816,11 @@
     <div class="progress-meta">
       <div class="progress-amount">
         <span>目前累積金額</span>
-        NT$ <span id="current-amount">0</span>
+        NT$ <span id="current-amount">5000</span>
       </div>
       <div class="progress-goal">
         <small>目標金額</small>
-        <strong>NT$ <span id="goal-amount"> 70,000</span></strong>
+        <strong>NT$ <span id="goal-amount"> 70000</span></strong>
       </div>
     </div>
 
@@ -830,11 +830,11 @@
 
     <div class="progress-stats">
       <div class="stat">
-        <span class="stat-value" id="percent-display">0%</span>
+        <span class="stat-value" id="percent-display">7.1%</span>
         <span class="stat-label">完成度</span>
       </div>
       <div class="stat">
-        <span class="stat-value" id="backer-count">0</span>
+        <span class="stat-value" id="backer-count">1</span>
         <span class="stat-label">贊助人數及單位</span>
       </div>
       <div class="stat">
@@ -1004,7 +1004,7 @@
     <h2>成為同行代禱夥伴</h2>
     <p>填寫以下表單，我會盡快與您確認匯款資訊。<br>每一份支持都會被妥善記錄，旅程中的文字也將持續與您分享。</p>
 
-        <a href="https://forms.gle/tyTws5CW31AiXvTHA" target="_blank" class="modal-cta" style="display: block; width: 100%; padding: 16px; margin-top: 24px; text-decoration: none; box-sizing: border-box;">
+        <a href="https://forms.gle/tyTws5CW31AiXvTHA" target="_blank" class="modal-cta" style="display: block; width: 100%; padding: 16px; margin-top: 24px; text-decoration: none; box-sizing: border-box;font-size: 1.2rem;">
       填寫代禱與支持表單 ↗
         </a>
 
@@ -1057,11 +1057,26 @@
       如果你有嵌入表單在頁面下方，也可以改為：
       onclick="closeModal(); document.getElementById('donate').scrollIntoView({behavior:'smooth'})"
     -->
+    <!--
     <a class="modal-cta" id="modal-form-link"
-       href="#donate"
+       href="https://forms.gle/tyTws5CW31AiXvTHA"
+       target="_blank" rel="noopener">
+     前往填寫贊助表單 →
+    </a>
+    -->
+
+    <a class="modal-cta" id="modal-form-link"
+        href="https://forms.gle/tyTws5CW31AiXvTHA"
+        target="_blank" rel="noopener"
+        style="font-size: 1rem; font-weight: 600;">
+     前往填寫贊助表單 →
+    </a>
+
+    <!--    <a class="modal-cta" id="modal-form-link"
+       href="https://forms.gle/tyTws5CW31AiXvTHA"
        onclick="closeModal(); setTimeout(()=>document.getElementById('donate').scrollIntoView({behavior:'smooth'}),200)">
       前往填寫贊助表單 →
-    </a>
+    </a>-->
   </div>
 </div>
 
@@ -1078,8 +1093,8 @@
 <script>
   const CONFIG = {
     goalAmount:    70000,
-    currentAmount: 0,
-    backerCount:   0,
+    currentAmount: 5000,
+    backerCount:   1,
     daysLeft:      60,
   };
 
@@ -1169,7 +1184,7 @@
     input.value = '';
   }
 
-/*
+
   const progressSection = document.getElementById('progress-section');
   let progressAnimated = false;
   const progressObserver = new IntersectionObserver((entries) => {
@@ -1201,7 +1216,7 @@
     }
   }, { threshold: 0.2 });
   progressObserver.observe(progressSection);
-*/
+
 </script>
 
 </body>
