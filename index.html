@@ -177,7 +177,7 @@
 
     .section-label {
       font-family: 'DM Mono', monospace;
-      font-size: 0.65rem;
+      font-size: 0.8rem;
       letter-spacing: 0.3em;
       text-transform: uppercase;
       color: var(--gold);
@@ -755,6 +755,74 @@
     }
 
     footer .footer-heart { color: var(--accent); }
+ 
+     /* ─── Journal / 禱告與默想 ─── */
+    #journal-section {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .journal-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin-top: 36px;
+    }
+
+    .journal-entry {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 32px;
+      padding: 32px 0;
+      border-top: 1px dashed var(--border);
+    }
+    .journal-entry:last-child {
+      border-bottom: 1px dashed var(--border);
+    }
+
+    .journal-date {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      color: var(--gold);
+      padding-top: 4px;
+      line-height: 1.8;
+    }
+    .journal-date strong {
+      display: block;
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: var(--ink);
+      letter-spacing: 0;
+      margin-bottom: 2px;
+    }
+
+    .journal-body h4 {
+      font-family: 'Noto Sans TC', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+
+    .journal-body p {
+      font-size: 1.2rem;
+      color: var(--muted);
+      line-height: 1.9;
+      white-space: pre-wrap;
+    }
+
+    .journal-empty {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--muted);
+      letter-spacing: 0.1em;
+      padding: 32px 0;
+      border-top: 1px dashed var(--border);
+    }
+
+    @media (max-width: 640px) {
+      .journal-entry { grid-template-columns: 1fr; gap: 8px; }
+    }
 
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(24px); }
@@ -808,6 +876,38 @@
   </div>
 </header>
 
+<!-- ══════════ JOURNAL 禱告與默想 ══════════ -->
+<div id="journal-section">
+  <section>
+    <div class="reveal">
+      <p class="section-label">紀錄</p>
+      <h2>禱告與默想</h2>
+    </div>
+
+    <div class="journal-list" id="journal-list">
+
+      <div class="journal-entry">
+        <div class="journal-date">
+          <strong>2026.07.12</strong>
+          週日
+        </div>
+        <div class="journal-body">
+          <h4>馬太福音 13:1-9, 18-23</h4>
+          <p>「就在那天，耶穌從房子裡出來，坐在海邊。有一大群人到他那裡聚集，他只好上船坐下，眾人都站在岸上。」
+
+忙碌了一天之後，耶穌坐在海邊，想什麼呢？忙碌了一天之後，今日的我們又坐在哪裡，想著什麼呢？比喻來得太快，想要糊弄跟隨的人，是不是聽到了三次拒絕：被吃掉了、枯乾了、被擠住了。那麼是誰聽到了「結出果實」呢？
+
+「人聽了道，明白了，後來結了果實...」耶穌沒有進一步解釋，何以如此，為何如此。
+
+今日的我們是否坐在不明白的道理上、困在人情世故上，擔心害怕，以至於也被擠住了呢？
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+</div>
+
 <!-- ══════════ PROGRESS ══════════ -->
 <div id="progress-section">
   <div class="progress-inner reveal">
@@ -816,7 +916,7 @@
     <div class="progress-meta">
       <div class="progress-amount">
         <span>目前累積金額</span>
-        NT$ <span id="current-amount">18000</span>
+        NT$ <span id="current-amount">70000</span>
       </div>
       <div class="progress-goal">
         <small>目標金額</small>
@@ -830,7 +930,7 @@
 
     <div class="progress-stats">
       <div class="stat">
-        <span class="stat-value" id="percent-display">25.7%</span>
+        <span class="stat-value" id="percent-display">100%</span>
         <span class="stat-label">完成度</span>
       </div>
       <div class="stat">
